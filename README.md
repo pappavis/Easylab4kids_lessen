@@ -1,4 +1,4 @@
-# Easylab4kids_lessen
+# Easylab4kids leerlijn
 Leren programmeren voor beginners Den Haag e.o.
 <br/>
 Zie http://easylab4kids.nl<br/>
