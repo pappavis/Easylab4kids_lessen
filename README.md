@@ -6,6 +6,6 @@ Zie http://easylab4kids.nl<br/>
 <img src="https://i.ytimg.com/vi/KXc8ZFIsgN8/maxresdefault.jpg" width="40%" height="40%">
 <br/>
 
-If you like this, support me with €1.
+If you like this, support me on <a href="https://www.patreon.com/easylab4kids/" target="_blank">Patreon</a> with €1.
 <a href="https://github.com/pappavis/Easylab4kids_lessen/blob/master/plaatjes/anim_mBot_lijn_volg.gif?raw=true"></a>
 <br/>
