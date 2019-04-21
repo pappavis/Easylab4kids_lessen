@@ -1,5 +1,6 @@
-<br>
 Microbit programmeromgeving kennismaking: toevoegen, verwijderen downloaden. Workshops na school in Den Haag. AANMELDEN hieronder.<br>
+ <br>
+<img src="https://github.com/pappavis/Easylab4kids_lessen/raw/master/plaatjes/Easy_Lab_logo_kleur.png?raw=true" width="20%" height="20%">
 <br>
 Componenten gebruikt:<br>
  - BBC Microbit. €22,50<br>
