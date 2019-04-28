@@ -1,6 +1,6 @@
 ## Easybot robot aansturen
 Door Michiel Erasmus <br/>
-<br/>
+<img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/078_Microbit_afstandbediening/plaatjes/078_Microbit_afstandbediening-20190420_anim.gif?raw=true"><br/>
 <br/>
 ## Benodigheden
  - 1x Easybot
