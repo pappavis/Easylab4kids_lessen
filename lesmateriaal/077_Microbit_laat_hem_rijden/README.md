@@ -1,6 +1,15 @@
 ### Demo programma
 Zo laat je de Microbit rijden <br>
-<br>
+
+## Benodigheden
+ - 1x Easybot
+
+## Hoe om te gebruik
+Kijk de videoclip, en doe de oefening!!
+<br/>
+## UITDAGING:
+Laat de robot 1 stap vooruit lopen, dan 1 sekonden wachten, en dan 1 stap achteruit rijden.<br/>
+<br/>
 Open in <a href="https://makecode.microbit.org/_Xwf0arbYRJLV" target="_blank">Makecode omgeving</a><br>
 
 Videoclip lesmateriaal:<br>
