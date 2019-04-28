@@ -19,6 +19,6 @@ Open het project in <a href="https://makecode.microbit.org/_7vdCWeWj5Jet" target
 <img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/078_Microbit_afstandbediening/078_Microbit_afstandbediening-20190420_plaatje.jpg?raw=true" width="30%" hieght="30%">
 <br/>
 ## Uitdaging!!
-Laat de robot de rote van A, B, C, D lopen tot E.<br/>
+Laat de robot de rote van A, B, C, D lopen tot G.<br/>
 <br/>
 <img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/078_Microbit_afstandbediening/uitdaging_matrixbord.jpg?raw=true"><br/>
