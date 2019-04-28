@@ -22,3 +22,5 @@ Open het project in <a href="https://makecode.microbit.org/_7vdCWeWj5Jet" target
 Laat de robot de rote van A, B, C, D lopen tot G.<br/>
 <br/>
 <img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/078_Microbit_afstandbediening/plaatjes/uitdaging_matrixbord.jpg?raw=true"><br/>
+<br>
+#s4k078<br>
