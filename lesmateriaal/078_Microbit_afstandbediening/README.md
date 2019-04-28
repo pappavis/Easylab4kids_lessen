@@ -12,6 +12,8 @@ Knop B - Draai rechtsaf 90 graden<br/>
 Knop A + B - Loop vooruit 1 stap<br/>
 Achteruit laten lopen - Druk op 0 en GND tegelijk.<br/>
 <br/>
+<img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/078_Microbit_afstandbediening/plaatjes/instructies.jpg?raw=true"><br>
+<br>
 Druk slechts 1x op een knop, en wacht totdat de robot de instructie heeft uitegvoerd. Druk dan op 'n volgende knop.<br/>
 <br/>
 Open het project in <a href="https://makecode.microbit.org/_7vdCWeWj5Jet" target="_blank">Makecode</a>
