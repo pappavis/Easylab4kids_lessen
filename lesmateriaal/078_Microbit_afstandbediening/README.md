@@ -17,7 +17,7 @@ Achteruit laten lopen - Druk op 0 en GND tegelijk.<br/>
 Druk slechts 1x op een knop, en wacht totdat de robot de instructie heeft uitegvoerd. Druk dan op 'n volgende knop.<br/>
 <br/>
 
-## Installatoe
+## Installatie
 Open het project in <a href="https://makecode.microbit.org/_7vdCWeWj5Jet" target="_blank">Makecode</a> en download naar beiden Microbits.
 <br/>
 <img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/078_Microbit_afstandbediening/plaatjes/078_Microbit_afstandbediening-20190420_plaatje.jpg?raw=true" width="30%" hieght="30%">
