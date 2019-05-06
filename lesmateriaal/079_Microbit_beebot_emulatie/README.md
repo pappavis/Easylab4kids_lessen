@@ -1,6 +1,12 @@
 ## Roboticales 079 <br>
 Vereenvoudigde instructies voor de robot. Vergelijkbaar met een Beebot.<br>
 <br>
+## Benodigheden
+ - 1x Easybot
+ - 2x Microbits
+ 
+ <br>
+ 
 ### Robot besturing<br>
 Bestuur de robot met 4x makelijke opdrachten:<br>
  - Oproep links<br>
