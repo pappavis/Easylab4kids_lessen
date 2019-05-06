@@ -2,8 +2,8 @@
 Vereenvoudigde instructies voor de robot. Vergelijkbaar met een Beebot.<br>
 <br>
 ## Benodigheden
- - 1x Easybot
- - 2x Microbits
+ - 1x Easybot + 3x AAA-batterijen
+ - 1x Microbit
  
  <br>
  
