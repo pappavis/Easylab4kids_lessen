@@ -8,7 +8,7 @@ Bestuur de robot met 4x makelijke opdrachten:<br>
  - Oproep vooruit<br>
  - Oproep achteruit<br>
 <br>
-### Opmerkingen:
+### Opmerkingen:<br>
 De robot voert de instructie uit, en stopt dan.<br>
 De robot loopt een paar centimeter vooruit, of achteruit en stopt.<br>
 <br>
