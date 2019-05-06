@@ -23,7 +23,7 @@ De robot loopt een paar centimeter vooruit, of achteruit en stopt.<br>
 Om hem bijvoorbeeld een klein vierkantje te laten lopen:<br>
 <img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/079_Microbit_beebot_emulatie/plaatjes/loop_vierkant.jpg?raw=true" width="40%" hieght="40%"><br>
 
-## Instructies
+## Wat jij moeten doen
 1. Zorg ervoor dat er batterijen in de robot is.<br>
 2. Zet de robot in een ruime ruimte neer, of op een grote tafel!!<br>
 3. Open deze code in <a href="https://makecode.microbit.org/_4HEEhPdkj7ak" target="_blank">makecode</a>. <br>
