@@ -52,10 +52,14 @@ Maak bovenstaand programma in de Makecode omgeving.<br>
 
 ### UITDAGING 2: Vierkant lopen
 Laat de robot een vierkant lopen.<br>
+<br>
 Pak een pen en papier.<br>
 Schrijf de instructies neer die nodig zijn voor deze programma. Zet jouw programma over in de makecode omgeving.<br>
-De plaatje hierboven maakt ook een vierkant, maar.. verzin je eigen code, of, als je snapt hoe functies werkt dan kan je makkelijk mijn code overnemen. Makkelijk hé?<br>
 <br>
-20190506 #easylab4kids<br>
+De voorbeeld blok code hierboven maakt ook een vierkant, maar.. verzin je eigen code, of, als je snapt hoe functies werkt dan kan je makkelijk mijn code overnemen. Makkelijk hé?<br>
+<br>
+<img src="https://github.com/pappavis/Easylab4kids_lessen/raw/master/plaatjes/Easy_Lab_logo_kleur.png?raw=true" width="20%" height="20%">
+<br>
+20190506 #e4k079 #easylab4kids<br>
 <br>
 <br>
