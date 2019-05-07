@@ -1,11 +1,9 @@
 ## Roboticales 079_Microbit_beebot_emulatie <br>
 Vereenvoudigde instructies voor de robot. Vergelijkbaar met een Beebot.<br>
-<br>
+
 ## Benodigheden
  - 1x Easybot + 3x AAA-batterijen
  - 1x Microbit
- 
- <br>
  
 ### Robot besturing programmablokken<br>
 Bestuur de robot met 4x makelijke opdrachten.
