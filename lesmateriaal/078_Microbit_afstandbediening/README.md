@@ -27,4 +27,7 @@ Laat de robot de rote van A, B, C, D lopen tot G.<br/>
 <br/>
 <img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/078_Microbit_afstandbediening/plaatjes/uitdaging_matrixbord.jpg?raw=true"><br/>
 <br>
+<img src="https://github.com/pappavis/Easylab4kids_lessen/raw/master/plaatjes/Easy_Lab_logo_kleur.png?raw=true" width="20%" height="20%">
+<br>
+
 #s4k078<br>
