@@ -1,6 +1,8 @@
 ## Roboticales 079_Microbit_beebot_emulatie <br>
 Vereenvoudigde instructies voor de robot. Vergelijkbaar met een Beebot.<br>
 
+<img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/079_Microbit_easybot/plaatjes/loop_vierkant_anim.gif?raw=true">
+
 ## Benodigheden
  - 1x Easybot + 3x AAA-batterijen
  - 1x Microbit
