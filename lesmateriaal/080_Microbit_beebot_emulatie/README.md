@@ -20,7 +20,7 @@ De robot voert de instructie uit, en stopt dan.<br>
 De robot loopt een paar centimeter vooruit, of achteruit en stopt. Precies zoals de Beebot.<br> 
 <br>
 Om hem bijvoorbeeld een klein vierkantje te laten lopen:<br>
-<img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/079_Microbit_beebot_emulatie/plaatjes/loop_vierkant.jpg?raw=true" width="30%" hieght="30%"><br>
+<img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/080_Microbit_beebot_emulatie/plaatjes/Easybot%20met%20afstandsbediening_klein.jpg?raw=true" width="30%" hieght="30%"><br>
 
 ## Wat jij moeten doen
 1. Zorg ervoor dat er batterijen in de robot is.<br>
