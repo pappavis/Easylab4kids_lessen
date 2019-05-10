@@ -1,5 +1,5 @@
 ## Roboticales 080_Microbit_beebot_emulatie <br>
-bestuur de Easybot met afstandbediening. Vergelijkbaar met een Beebot.<br>
+Bestuur jouw Easybot met afstandbediening. Vergelijkbaar met een Beebot.<br>
 
 ## Benodigheden
  - 1x Easybot + 3x AAA-batterijen
@@ -62,7 +62,7 @@ Doe hiermee de <a href="https://makecode.microbit.org/_hDueovKC8WVD" target="_bl
 <br>
 <img src="https://github.com/pappavis/Easylab4kids_lessen/raw/master/plaatjes/Easy_Lab_logo_kleur.png?raw=true" width="20%" height="20%"><br>
 <br>
-20190506 #e4k079 #easylab4kids<br>
+20190506 #e4k080 #easylab4kids<br>
 <br>
 <br>
 
