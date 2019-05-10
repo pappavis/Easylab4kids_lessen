@@ -5,7 +5,9 @@ Bestuur jouw Easybot met afstandbediening. Vergelijkbaar met een Beebot.<br>
  - 1x Easybot + 3x AAA-batterijen
  - 1x Microbit
  - 1x Afstandsbediening (veel soorten afstandsbedieningen zijn geschikt)
- 
+
+<img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/080_Microbit_beebot_emulatie/plaatjes/Easybot%20met%20afstandsbediening_klein.jpg?raw=true" width="30%" hieght="30%"><br>
+
 ### Robot besturing programmablokken<br>
 Bestuur de robot met 4x makelijke opdrachten.
 
@@ -20,7 +22,6 @@ De robot voert de instructie uit, en stopt dan.<br>
 De robot loopt een paar centimeter vooruit, of achteruit en stopt. Precies zoals de Beebot.<br> 
 <br>
 Om hem bijvoorbeeld een klein vierkantje te laten lopen:<br>
-<img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/080_Microbit_beebot_emulatie/plaatjes/Easybot%20met%20afstandsbediening_klein.jpg?raw=true" width="30%" hieght="30%"><br>
 
 ## Wat jij moeten doen
 1. Zorg ervoor dat er batterijen in de robot is.<br>
