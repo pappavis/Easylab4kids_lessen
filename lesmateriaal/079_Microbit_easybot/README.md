@@ -1,4 +1,4 @@
-## Roboticales 079_Microbit_beebot_emulatie <br>
+## Roboticales 079_Microbit_easybot <br>
 Vereenvoudigde instructies voor de robot. Vergelijkbaar met een Beebot.<br>
 
 <img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/079_Microbit_easybot/plaatjes/loop_vierkant_anim.gif?raw=true">
