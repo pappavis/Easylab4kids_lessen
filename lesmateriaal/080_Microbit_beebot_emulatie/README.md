@@ -1,7 +1,7 @@
 ## Roboticales 080_Microbit_beebot_emulatie <br>
 Bestuur jouw Easybot met afstandbediening. Vergelijkbaar met een Beebot.<br>
 
-<img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/080_Microbit_beebot_emulatie/plaatjes/Easybot%20met%20afstandsbediening_klein.jpg?raw=true" width="30%" hieght="30%"><br>
+<img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/080_Microbit_beebot_emulatie/plaatjes/easybot_afstand.gif?raw=true" width="30%" hieght="30%"><br>
 
 ## Benodigheden
  - 1x Easybot + 3x AAA-batterijen
