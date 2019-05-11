@@ -59,8 +59,10 @@ Schrijf de instructies neer die nodig zijn voor deze programma. Zet jouw program
 <br>
 De voorbeeld blok code hierboven maakt ook een vierkant, maar.. verzin je eigen code, of, als je snapt hoe functies werkt dan kan je makkelijk mijn code overnemen. Makkelijk hé?<br>
 <br>
-BONUS!!!<br>
+### UITDAGING 3: easybot routekaart<br>
 Doe hiermee de <a href="https://makecode.microbit.org/_hDueovKC8WVD" target="_blank">Beebot</a>emulatie. <br>
+<br>
+<img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/080_Microbit_beebot_emulatie/plaatjes/easybot-mat-Engeland.jpg?raw=true"><br>
 <br>
 <img src="https://github.com/pappavis/Easylab4kids_lessen/raw/master/plaatjes/Easy_Lab_logo_kleur.png?raw=true" width="20%" height="20%"><br>
 <br>
