@@ -26,7 +26,11 @@ Om hem bijvoorbeeld een klein vierkantje te laten lopen:<br>
 ## Wat jij moeten doen
 1. Zorg ervoor dat er batterijen in de robot is en een afstandsbediening, bijna ALLE afstandbedieningen zijn goed :).<br>
 2. Zet de robot in een ruime ruimte neer, of op een grote tafel!!<br>
+<<<<<<< HEAD
 3. Open deze code in <a href="https://makecode.microbit.org/_FjHezs8pt7WX" target="_blank">makecode</a>. <br>
+=======
+3. Open deze code in <a href="https://makecode.microbit.org/_fdTWLw3cXMXe" target="_blank">makecode</a>. <br>
+>>>>>>> e182f1d7a502ac9c3f1f8522ba82f17a34df715f
 4. Download de naar een Microbit.<br>
 5. Sluit de Microbit aan op de robot.<br>
 6. Ontkoppel de Microbit USB kabel van de computer.<br>
@@ -59,8 +63,10 @@ Schrijf de instructies neer die nodig zijn voor deze programma. Zet jouw program
 <br>
 De voorbeeld blok code hierboven maakt ook een vierkant, maar.. verzin je eigen code, of, als je snapt hoe functies werkt dan kan je makkelijk mijn code overnemen. Makkelijk hé?<br>
 <br>
-BONUS!!!<br>
+### UITDAGING 3: easybot routekaart<br>
 Doe hiermee de <a href="https://makecode.microbit.org/_hDueovKC8WVD" target="_blank">Beebot</a>emulatie. <br>
+<br>
+<img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/080_Microbit_beebot_emulatie/plaatjes/easybot-mat-Engeland.jpg?raw=true"><br>
 <br>
 <img src="https://github.com/pappavis/Easylab4kids_lessen/raw/master/plaatjes/Easy_Lab_logo_kleur.png?raw=true" width="20%" height="20%"><br>
 <br>
