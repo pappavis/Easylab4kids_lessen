@@ -26,11 +26,7 @@ Om hem bijvoorbeeld een klein vierkantje te laten lopen:<br>
 ## Wat jij moeten doen
 1. Zorg ervoor dat er batterijen in de robot is en een afstandsbediening, bijna ALLE afstandbedieningen zijn goed :).<br>
 2. Zet de robot in een ruime ruimte neer, of op een grote tafel!!<br>
-<<<<<<< HEAD
-3. Open deze code in <a href="https://makecode.microbit.org/_FjHezs8pt7WX" target="_blank">makecode</a>. <br>
-=======
-3. Open deze code in <a href="https://makecode.microbit.org/_fdTWLw3cXMXe" target="_blank">makecode</a>. <br>
->>>>>>> e182f1d7a502ac9c3f1f8522ba82f17a34df715f
+3. Open deze code in <a href="https://makecode.microbit.org/_Ja0W8o9c1RxC" target="_blank">makecode</a>. <br>
 4. Download de naar een Microbit.<br>
 5. Sluit de Microbit aan op de robot.<br>
 6. Ontkoppel de Microbit USB kabel van de computer.<br>
