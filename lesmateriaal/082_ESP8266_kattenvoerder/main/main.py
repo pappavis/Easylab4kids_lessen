@@ -17,7 +17,7 @@ mqtt_server = 'dietpi'
 #EXAMPLE IP ADDRESS
 #mqtt_server = '192.168.1.144'
 client_id = ubinascii.hexlify(machine.unique_id())
-topic_sub = b'esp8266_notification'
+topic_sub = b'kattenvoer/esp8266_notification'
 topic_pub = b'hello'
 
 booted = 0
@@ -57,7 +57,7 @@ def sub_cb(topic, msg):
         if topic == topic_sub and msg == b'received':
             print('ESP received hello message')
 
-        if topic == b'LED_INTERNAL':
+        if topic == b'kattenvoer/LED_INTERNAL':
             import time
             from machine import Pin
 
@@ -66,29 +66,29 @@ def sub_cb(topic, msg):
             if (msg.isdigit()):
                 aantalKnipperen = int(msg)
                 print('ESP knipperen LEDje')
-                client.publish("DEBUG", "client " + str(client_id) + " START knipperen LEDje")
+                client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " START knipperen LEDje")
 
                 for herhaal1 in range(0, aantalKnipperen):
                     led.value(1)            #Set led turn on
                     time.sleep(0.2)
                     led.value(0)            #Set led turn off
                     time.sleep(0.5)
-                    client.publish("DEBUG", "client " + str(client_id) + " knipperen " + str(herhaal1))
+                    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " knipperen " + str(herhaal1))
                     
                 led.value(1)            #Set led turn off
             else:
                 if (msg == b'LED_AAN'):
-                    client.publish("DEBUG", "client " + str(client_id) + " ESP LEDje status AAN")
+                    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " ESP LEDje status AAN")
                     led.value(0)            #Set led turn on                    
                             
                 if (msg == b'LED_UIT'):
-                    client.publish("DEBUG", "client " + str(client_id) + " ESP LEDje status UIT")
+                    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " ESP LEDje status UIT")
                     led.value(1)            #Set led turn on                            
 
-        if topic == b'SERVO_AANUIT' and msg == b'servoaanuit':
+        if topic == b'kattenvoer/SERVO_AANUIT' and msg == b'servoaanuit':
             doseerVoer()
 
-        if topic == b'DEEPSLEEP_AANUIT':
+        if topic == b'kattenvoer/DEEPSLEEP_AANUIT':
             import time, esp
             from machine import RTC
             
@@ -96,7 +96,7 @@ def sub_cb(topic, msg):
                 deepsleepTime = int(msg)
                 if (deepsleepTime > 1):
                     print("Deepsleep AAN: " + str(deepsleepTime))
-                    client.publish("DEBUG", "client " + str(client_id) + " Deepsleep AAN: " + str(deepsleepTime))
+                    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " Deepsleep AAN: " + str(deepsleepTime))
                     deepsleepAanUit = 1
                     
                     # configure RTC.ALARM0 to be able to wake the device
@@ -104,8 +104,8 @@ def sub_cb(topic, msg):
                     rtc.irq(trigger=rtc.ALARM0, wake=machine.DEEPSLEEP)
 
                     print("Zzzzzzzzz")
-                    client.publish("DEBUG", "client " + str(client_id) + " Deepsleep tyd:" + str(deepsleepTime))
-                    client.publish("DEBUG", "client " + str(client_id) + " Zzzzzzzzz")
+                    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " Deepsleep tyd:" + str(deepsleepTime))
+                    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " Zzzzzzzzz")
                     
                     # put the device to sleep
                     deep_sleep_esp(deepsleepTime * 1000)
@@ -118,11 +118,11 @@ def sub_cb(topic, msg):
 
                     #connect_and_subscribe()
                     #time.sleep_ms(50)
-                    client.publish("DEBUG", "client " + str(client_id) + " is wakker geworden.")
+                    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " is wakker geworden.")
 
                 else:
                     print("Deepsleep UIT")
-                    client.publish("DEBUG", "client " + str(client_id) + " Deepsleep UIT")
+                    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " Deepsleep UIT")
                     deepsleepAanUit = 0
 
 def deep_sleep_esp(msecs) :   
@@ -143,19 +143,19 @@ def connect_and_subscribe():
     client.connect()
     client.publish("ONTWAAKT", str(client_id) + " INIT start")
     client.subscribe(topic_sub)
-    client.subscribe("DEBUG")
-    client.publish("DEBUG", "client " + str(client_id) + " subscribed aan DEBUG")
-    client.subscribe("LED_INTERNAL")
-    client.publish("DEBUG", "client " + str(client_id) + " subscribed aan LED_INTERNAL")
-    client.subscribe("SERVO_AANUIT")
-    client.publish("DEBUG", "client " + str(client_id) + " subscribed aan SERVO_AANUIT")
-    client.subscribe("DEEPSLEEP_AANUIT")
-    client.publish("DEBUG", "client " + str(client_id) + " subscribed aan DEEPSLEEP_AANUIT")
+    client.subscribe("kattenvoer/DEBUG")
+    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " subscribed aan DEBUG")
+    client.subscribe("kattenvoer/LED_INTERNAL")
+    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " subscribed aan kattenvoer/LED_INTERNAL")
+    client.subscribe("kattenvoer/SERVO_AANUIT")
+    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " subscribed aan kattenvoer/SERVO_AANUIT")
+    client.subscribe("kattenvoer/DEEPSLEEP_AANUIT")
+    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " subscribed aan kattenvoer/DEEPSLEEP_AANUIT")
     client.subscribe("ONTWAAKT")
-    client.publish("DEBUG", "client " + str(client_id) + " subscribed aan ONTWAAKT")
-    client.subscribe("DEEPSLEEP_AANUIT")
-    client.publish("DEBUG", "client " + str(client_id) + " subscribed aan DEEPSLEEP_AANUIT")
-    client.publish("ONTWAAKT", str(client_id) + " INIT eind")
+    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " subscribed aan ONTWAAKT")
+    client.subscribe("kattenvoer/DEEPSLEEP_AANUIT")
+    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " subscribed aan kattenvoer/DEEPSLEEP_AANUIT")
+    client.publish("kattenvoer/ONTWAAKT", str(client_id) + " INIT eind")
     
     return client
 
@@ -168,7 +168,7 @@ def doseerVoer():
     import time
     from machine import Pin, PWM
     print("START microservo")
-    client.publish("DEBUG", "client " + str(client_id) + " START microservo")
+    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " START microservo")
     time.sleep(1.5)
     servo = PWM(Pin(14), freq=50, duty=140)
     led=Pin(2,Pin.OUT)        #create LED object from pin2,Set Pin2 to output
@@ -182,8 +182,10 @@ def doseerVoer():
     led.value(1)            #Set led turn on
 
     print("EIND microservo")
-    client.publish("DEBUG", "client " + str(client_id) + " EIND microservo")
+    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " EIND microservo")
 
+def getSettingsFromMQQT():
+    client.publish("kattenvoer/INSTELLINGEN","VoerInterval=1")
 
 try:
     client = connect_and_subscribe()
