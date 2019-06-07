@@ -1,12 +1,11 @@
 # 20190604 zie voorbeeld https://randomnerdtutorials.com/micropython-mqtt-esp32-esp8266/
-import time
+import time, utime
 from umqtt.simple import MQTTClient
 import ubinascii
 import machine
 import micropython
 import network
 import esp
-from ota_update.main.ota_updater import OTAUpdater
 
 esp.osdebug(None)
 import gc
@@ -23,7 +22,8 @@ topic_pub = b'hello'
 
 booted = 0
 last_message = 0
-message_interval = 5
+message_interval = 5000
+next_message = 0
 counter = 0
 deepsleepAanUit = 0
 LedInternalAanUit = False
@@ -39,20 +39,6 @@ print('WiFi Connection successful')
 print(station.ifconfig())
 
 client = MQTTClient(client_id, mqtt_server, user="admin", password="admin")
-
-def download_and_install_update_if_available():
-    ota_updater = OTAUpdater('url-to-your-github-project')
-    ota_updater.download_and_install_update_if_available(ssid, password)
-
-def start():
-    # your custom code goes here. Something like this: ...
-    # from main.x import YourProject
-    # project = YourProject()
-    # ...
-
-def boot():
-    download_and_install_update_if_available()
-    start()
 
 def rtc_ticks_ms(rtc):
     timedate = rtc.now()
@@ -100,24 +86,7 @@ def sub_cb(topic, msg):
                     led.value(1)            #Set led turn on                            
 
         if topic == b'SERVO_AANUIT' and msg == b'servoaanuit':
-            import time
-            from machine import Pin, PWM
-            print("START microservo")
-            client.publish("DEBUG", "client " + str(client_id) + " START microservo")
-            time.sleep(1.5)
-            servo = PWM(Pin(14), freq=50, duty=140)
-            led=Pin(2,Pin.OUT)        #create LED object from pin2,Set Pin2 to output
-
-            led.value(0)            #Set led turn on
-            time.sleep(0.8)
-            led.value(1)            #Set led turn off
-            print("beweeg microservo 30")
-            servo.duty(30)
-            time.sleep(0.5)
-            led.value(1)            #Set led turn on
-
-            print("EIND microservo")
-            client.publish("DEBUG", "client " + str(client_id) + " EIND microservo")
+            doseerVoer()
 
         if topic == b'DEEPSLEEP_AANUIT':
             import time, esp
@@ -195,24 +164,55 @@ def restart_and_reconnect():
     time.sleep_ms(5000)
     machine.reset()
 
+def doseerVoer():
+    import time
+    from machine import Pin, PWM
+    print("START microservo")
+    client.publish("DEBUG", "client " + str(client_id) + " START microservo")
+    time.sleep(1.5)
+    servo = PWM(Pin(14), freq=50, duty=140)
+    led=Pin(2,Pin.OUT)        #create LED object from pin2,Set Pin2 to output
+
+    led.value(0)            #Set led turn on
+    time.sleep(0.8)
+    led.value(1)            #Set led turn off
+    print("beweeg microservo 30")
+    servo.duty(30)
+    time.sleep(0.5)
+    led.value(1)            #Set led turn on
+
+    print("EIND microservo")
+    client.publish("DEBUG", "client " + str(client_id) + " EIND microservo")
+
+
 try:
     client = connect_and_subscribe()
 except OSError as e:
     restart_and_reconnect()
 
+
+# ---------------------------------------------------------
+#  Main loop
 while True:
     try:
         client.check_msg()
-        if (time.time() - last_message) > message_interval:
+        
+        # om de paar sekonden, lat hem iets doen, kan jezelf invullen
+        if (utime.ticks_ms() > next_message):
             msg = b'Hello #%d' % counter
             client.publish(topic_pub, msg)
-            last_message = time.time()
+            next_message = utime.ticks_ms() + message_interval
+            
+            print(msg)
             counter += 1
 
         #na opstart, mag nu MQQT berichten ontvangen.
         if (booted == 0):
             LedInternalAanUit = False
-            booted = 1  
+            booted = 1
+            next_message = utime.ticks_ms() + message_interval
             
     except OSError as e:
         restart_and_reconnect()
+# ---------------------------------------------------------
+
