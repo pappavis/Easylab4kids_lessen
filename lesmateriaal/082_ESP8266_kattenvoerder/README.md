@@ -1,4 +1,4 @@
-## ESP8266 Kattenvoerder
+## DIY WiFi Catfeeder
 Uw katten op afstand voer toedienen <br>
 
 ## Benodigheden
