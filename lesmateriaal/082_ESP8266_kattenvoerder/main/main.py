@@ -20,13 +20,15 @@ client_id = ubinascii.hexlify(machine.unique_id())
 topic_sub = b'kattenvoer/esp8266_notification'
 topic_pub = b'hello'
 
-booted = 0
+booted = False
 last_message = 0
 message_interval = 5000
 next_message = 0
 counter = 0
 deepsleepAanUit = 0
+deepsleepTime = 30
 LedInternalAanUit = False
+giVoerIntervalMinuten = 15 * 1000
 station = network.WLAN(network.STA_IF)
 
 station.active(True)
@@ -88,43 +90,55 @@ def sub_cb(topic, msg):
         if topic == b'kattenvoer/SERVO_AANUIT' and msg == b'servoaanuit':
             doseerVoer()
 
-        if topic == b'kattenvoer/DEEPSLEEP_AANUIT':
-            import time, esp
-            from machine import RTC
-            
+        if (topic == b'kattenvoer/INSTELLINGEN/getVoerInterval'):
             if (msg.isdigit()):
-                deepsleepTime = int(msg)
-                if (deepsleepTime > 1):
-                    print("Deepsleep AAN: " + str(deepsleepTime))
-                    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " Deepsleep AAN: " + str(deepsleepTime))
-                    deepsleepAanUit = 1
-                    
-                    # configure RTC.ALARM0 to be able to wake the device
-                    rtc = machine.RTC()
-                    rtc.irq(trigger=rtc.ALARM0, wake=machine.DEEPSLEEP)
+                giVoerIntervalMinuten = int(msg) * 1000
+                next_message = utime.ticks_ms() + giVoerIntervalMinuten
+                print("client " + str(client_id) + " getVoerInterval: " + str(giVoerIntervalMinuten))
+                client.publish("kattenvoer/INSTELLINGEN/getVoerInterval", "client " + str(client_id) + " message_interval:" + str(giVoerIntervalMinuten))
 
-                    print("Zzzzzzzzz")
-                    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " Deepsleep tyd:" + str(deepsleepTime))
-                    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " Zzzzzzzzz")
-                    
-                    # put the device to sleep
-                    deep_sleep_esp(deepsleepTime * 1000)
+        if topic == b'kattenvoer/DEEPSLEEP_AANUIT':
+            deepsleepTime = int(msg)
+            
+            
+def lekkerSlaap() :
+        import time, esp
+        from machine import RTC
+        
+        if (deepsleepTime > 1):
+            print("Deepsleep AAN: " + str(deepsleepTime))
+            client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " Deepsleep AAN: " + str(deepsleepTime))
+            deepsleepAanUit = 1
+            
+            # configure RTC.ALARM0 to be able to wake the device
+            rtc = machine.RTC()
+            rtc.irq(trigger=rtc.ALARM0, wake=machine.DEEPSLEEP)
 
-                    # check if the device woke from a deep sleep
-                    if (machine.reset_cause() == machine.DEEPSLEEP_RESET):
-                        print("client " + str(client_id) + "is wakker gewordenXXX.")
-                    else:
-                        print("POWER ON")
+            print("Zzzzzzzzz")
+            client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " Deepsleep tyd:" + str(deepsleepTime))
+            client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " Zzzzzzzzz")
+            
+            # put the device to sleep
+            deep_sleep_esp(deepsleepTime * 1000)
 
-                    #connect_and_subscribe()
-                    #time.sleep_ms(50)
-                    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " is wakker geworden.")
+            # check if the device woke from a deep sleep
+            if (machine.reset_cause() == machine.DEEPSLEEP_RESET):
+                print("client " + str(client_id) + "is wakker gewordenXXX.")
+            else:
+                print("POWER ON")
 
-                else:
-                    print("Deepsleep UIT")
-                    client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " Deepsleep UIT")
-                    deepsleepAanUit = 0
+            #connect_and_subscribe()
+            #time.sleep_ms(50)
+            client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " is wakker geworden.")
+            doseerVoer()
+            client.publish("kattenvoer/ONTWAAKT","getVoerInterval")
 
+        else:
+            print("Deepsleep UIT")
+            client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " Deepsleep UIT")
+            deepsleepAanUit = 0
+    
+    
 def deep_sleep_esp(msecs) :   
     # configure RTC.ALARM0 to be able to wake the device 
     timer = machine.Timer(-1)
@@ -154,6 +168,8 @@ def connect_and_subscribe():
     client.subscribe("ONTWAAKT")
     client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " subscribed aan ONTWAAKT")
     client.subscribe("kattenvoer/DEEPSLEEP_AANUIT")
+    client.subscribe("kattenvoer/INSTELLINGEN/getVoerInterval")
+    client.subscribe("kattenvoer/INSTELLINGEN/getCurrentDateTime")
     client.publish("kattenvoer/DEBUG", "client " + str(client_id) + " subscribed aan kattenvoer/DEEPSLEEP_AANUIT")
     client.publish("kattenvoer/ONTWAAKT", str(client_id) + " INIT eind")
     
@@ -200,19 +216,23 @@ while True:
         client.check_msg()
         
         # om de paar sekonden, lat hem iets doen, kan jezelf invullen
-        if (utime.ticks_ms() > next_message):
+        if (utime.ticks_ms() > next_message and booted==True):
             msg = b'Hello #%d' % counter
             client.publish(topic_pub, msg)
-            next_message = utime.ticks_ms() + message_interval
+            next_message = utime.ticks_ms() + giVoerIntervalMinuten
             
             print(msg)
             counter += 1
+            doseerVoer()
+            lekkerSlaap()
 
         #na opstart, mag nu MQQT berichten ontvangen.
-        if (booted == 0):
+        if (booted == False):
+            from ntptime import settime
+            settime()
             LedInternalAanUit = False
             booted = 1
-            next_message = utime.ticks_ms() + message_interval
+            next_message = utime.ticks_ms() + giVoerIntervalMinuten
             
     except OSError as e:
         restart_and_reconnect()
