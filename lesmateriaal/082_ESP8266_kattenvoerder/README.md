@@ -31,19 +31,18 @@ Uiteraard, voor je beginnen zorg ervoor dat je deze in huis heb.
  - SQLite3 database.
  - 8Gb SD card met <a href="http://www.sensorsiot.org/diet-pi-supporting-material-videos-126-and-128/" target="_blank">dietpi image</a> van Andreas Spiess.
  - <a href="https://thonny.org/" target="_blank">Thonny</a> Micropython IDE.
- - Micropython <a href="https://medium.com/@JockDaRock/micropython-esp8266-quick-start-part-2-flash-the-esp8266-with-micropython-6fbbb9339bae">installeren</a> op ESP8266.
 
 Mosquitto en SQLite komt al vooraf geïnstaleerd op dietpi.
 Een ESP-01 werkt ook, maar wegens tekort aan output pinnen niet geschikt.
 
  # Stappenplan
-  - Zet de Micropython over op ESP8266
-  - Maak jumper van D0 naar RST op Wemos d1 mini.
-  - Deploy de node-red flow naar dietpi.
-  - Gebruik je mobiele telefoon op http://dietpi:1880/ui/#/1
-  - Knip een passend sleuf in de cola flesje
-  - Monteer de cola flesje zoals hierboven is aangetoond.
-  - Verbind de SG90 servo aan de cola dop.
+  1. Micropython <a href="https://medium.com/@JockDaRock/micropython-esp8266-quick-start-part-2-flash-the-esp8266-with-micropython-6fbbb9339bae">installeren</a> op ESP8266.
+  2. Maak jumper van D0 naar RST op Wemos d1 mini.
+  3. Deploy de node-red flow naar dietpi.
+  4. Gebruik je mobiele telefoon op http://dietpi:1880/ui/#/1
+  5. Knip een passend sleuf in de cola flesje
+  6. Monteer de cola flesje zoals hierboven is aangetoond.
+  7. Verbind de SG90 servo aan de cola dop.
 
 
 ## TODO: volledig documentatie maken.
