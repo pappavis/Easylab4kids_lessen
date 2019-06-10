@@ -25,6 +25,9 @@ Uiteraard, voor je beginnen zorg ervoor dat je deze in huis heb.
  - 1x SG90 microservo. €2,50
  - 1x Lege colaflesje 500ml, of 1L €0,00.
  - 1x schaar €0,50.
+ - 1x MicroUSB kabel
+
+Bestellen kant-en-klaar €25,00.
 
 | Microcontroller  | Computertje |
 | ------------- | ------------- |
