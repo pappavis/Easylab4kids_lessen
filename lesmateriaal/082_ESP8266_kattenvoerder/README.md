@@ -37,7 +37,10 @@ Een ESP-01 werkt ook, maar wegens tekort aan output pinnen niet geschikt.
 
  # Stappenplan
   1. Micropython <a href="https://medium.com/@JockDaRock/micropython-esp8266-quick-start-part-2-flash-the-esp8266-with-micropython-6fbbb9339bae">installeren</a> op ESP8266.
+  
   2. Maak jumper van D0 naar RST op Wemos d1 mini.
+  <img src="https://projetsdiy.fr/wp-content/uploads/2018/06/wemos-d1-mini-activate-deep-sleep-mode-esp8266.jpg">
+  
   3. Deploy de node-red flow naar dietpi.
   4. Gebruik je mobiele telefoon op http://dietpi:1880/ui/#/1
   5. Knip een passend sleuf in de cola flesje
