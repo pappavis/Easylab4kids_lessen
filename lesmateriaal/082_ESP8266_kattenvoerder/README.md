@@ -13,18 +13,25 @@ Een computerprogramma doseert kattenvoer op vaste intervals.
  - Niveau 1. "Ikea-niveau.. je moet , instructies kunnen lezen, en ze opvolgen.
  - Niveau 2. Gamma bouwmarkt doe-het-zelfer. Je heb de basisplan, nu gaat je zelf klussen.
 
-Wijgaan aan de slag met (virtuele) gereedschap.  
+Wij gaan aan de slag met (virtuele) gereedschap.  
 Heb je dit nooit eerder gedaan, dan adviseer ik je de Ikea-niveau ;)
 
+# Benodigheden
+Uiteraard, voor je beginnen zorg ervoor dat je deze in huis heb.
 
-## Benodigheden
- - 1x ESP8266 zoals Wemos D1 Mini
- - 1x Raspberry Pi zero met <a href="http://www.sensorsiot.org/diet-pi-supporting-material-videos-126-and-128/" target="_blank">dietpi image</a> van Andreas Spiess.
+## Randapparatuur
+ - 1x ESP8266 zoals Wemos D1 Mini  €5,00
+ - 1x Raspberry Pi zero W 1.3  €12,00
  - 1x SG90 microservo.
  - 1x Lege colaflesje 500ml, of 1L.
  - 1x schaar.
+
+## Software benodigd
+ - 8Gb SD card met <a href="http://www.sensorsiot.org/diet-pi-supporting-material-videos-126-and-128/" target="_blank">dietpi image</a> van Andreas Spiess.
  - Micropython gedeploy op de ESP8266.
- 
+
+Een ESP-01 werkt ook, maar wegens tekort aan output pinnen niet geschikt.
+
  # Stappenplan
   - Zet de Micropython over op ESP8266
   - Maak jumper van D0 naar RST op Wemos d1 mini.
