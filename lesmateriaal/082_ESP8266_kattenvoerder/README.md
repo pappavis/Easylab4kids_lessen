@@ -1,7 +1,7 @@
 ## DIY WiFi Catfeeder
 Uw katten op afstand voer toedienen <br>
 
-<img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/082_ESP8266_kattenvoerder/plaatjes/kattenvoerder_demo1.jpg?raw=true" width="30%" height="30%">
+<img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/082_ESP8266_kattenvoerder/plaatjes/kattenvoerder_anim.gif?raw=true" width="30%" height="30%">
 
 ## Benodigheden
  - ESP8266 zoals Wemos D1 Mini
