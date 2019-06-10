@@ -6,7 +6,7 @@ Uw katten op afstand voer toedienen <br>
 ## Benodigheden
  - ESP8266 zoals Wemos D1 Mini
  - Micropython gedeploy op de ESP8266
- - Raspberry Pi zero met dietpi image van Andreas Spiess
+ - Raspberry Pi zero met <a href="http://www.sensorsiot.org/diet-pi-supporting-material-videos-126-and-128/" target="_blank">dietpi image</a> van Andreas Spiess
  - SG90 microservo
  - lege colaflesje
  
