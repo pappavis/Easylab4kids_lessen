@@ -3,12 +3,27 @@ Uw katten op afstand voer toedienen <br>
 
 <img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/082_ESP8266_kattenvoerder/plaatjes/kattenvoerder_anim.gif?raw=true" width="30%" height="30%">
 
+# Waarom?
+Omdat het kan. Omdat het moeilijk is. Je kunt ook in een winkel kopen. Weet ik. 
+
+# Hoe werkt het
+Een computerprogramma doseert kattenvoer op vaste intervals. 
+
+# Ervaring vereist
+ - Niveau 1. "Ikea-niveau.. je moet , instructies kunnen lezen, en ze opvolgen.
+ - Niveau 2. Gamma bouwmarkt doe-het-zelfer. Je heb de basisplan, nu gaat je zelf klussen.
+
+Wijgaan aan de slag met (virtuele) gereedschap.  
+Heb je dit nooit eerder gedaan, dan adviseer ik je de Ikea-niveau ;)
+
+
 ## Benodigheden
- - ESP8266 zoals Wemos D1 Mini
- - Micropython gedeploy op de ESP8266
- - Raspberry Pi zero met <a href="http://www.sensorsiot.org/diet-pi-supporting-material-videos-126-and-128/" target="_blank">dietpi image</a> van Andreas Spiess
- - SG90 microservo
- - lege colaflesje
+ - 1x ESP8266 zoals Wemos D1 Mini
+ - 1x Raspberry Pi zero met <a href="http://www.sensorsiot.org/diet-pi-supporting-material-videos-126-and-128/" target="_blank">dietpi image</a> van Andreas Spiess.
+ - 1x SG90 microservo.
+ - 1x Lege colaflesje 500ml, of 1L.
+ - 1x schaar.
+ - Micropython gedeploy op de ESP8266.
  
  # Stappenplan
   - Zet de Micropython over op ESP8266
