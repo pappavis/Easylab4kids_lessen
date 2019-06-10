@@ -26,10 +26,10 @@ Uiteraard, voor je beginnen zorg ervoor dat je deze in huis heb.
  - 1x Lege colaflesje 500ml, of 1L €0,00.
  - 1x schaar €0,50.
 
-| First Header  | Second Header |
+| Bnodigheden  | En meer |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+|Wemos D1 Mini | Raspberry Pi Zero W  |
+| <img src="https://projetsdiy.fr/wp-content/uploads/2018/06/wemos-d1-mini-activate-deep-sleep-mode-esp8266.jpg"  width="40%" height="40%"> | <img src="http://rcl.lt/files/f58c6a291a58a402fc48-128x128">  |
 
 ## Software benodigd
  - Mosquitto MQQT server
