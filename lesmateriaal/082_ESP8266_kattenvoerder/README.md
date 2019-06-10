@@ -22,14 +22,18 @@ Uiteraard, voor je beginnen zorg ervoor dat je deze in huis heb.
 ## Randapparatuur
  - 1x ESP8266 zoals Wemos D1 Mini  €5,00
  - 1x Raspberry Pi zero W 1.3  €12,00
- - 1x SG90 microservo.
- - 1x Lege colaflesje 500ml, of 1L.
- - 1x schaar.
+ - 1x SG90 microservo. €2,50
+ - 1x Lege colaflesje 500ml, of 1L €0,00.
+ - 1x schaar €0,50.
 
 ## Software benodigd
+ - Mosquitto MQQT server
+ - SQLite3 database.
  - 8Gb SD card met <a href="http://www.sensorsiot.org/diet-pi-supporting-material-videos-126-and-128/" target="_blank">dietpi image</a> van Andreas Spiess.
- - Micropython gedeploy op de ESP8266.
+ - <a href="https://thonny.org/" target="_blank">Thonny</a> Micropython IDE.
+ - Micropython <a href="https://medium.com/@JockDaRock/micropython-esp8266-quick-start-part-2-flash-the-esp8266-with-micropython-6fbbb9339bae">installeren</a> op ESP8266.
 
+Mosquitto en SQLite komt al vooraf geïnstaleerd op dietpi.
 Een ESP-01 werkt ook, maar wegens tekort aan output pinnen niet geschikt.
 
  # Stappenplan
@@ -37,7 +41,11 @@ Een ESP-01 werkt ook, maar wegens tekort aan output pinnen niet geschikt.
   - Maak jumper van D0 naar RST op Wemos d1 mini.
   - Deploy de node-red flow naar dietpi.
   - Gebruik je mobiele telefoon op http://dietpi:1880/ui/#/1
-  
+  - Knip een passend sleuf in de cola flesje
+  - Monteer de cola flesje zoals hierboven is aangetoond.
+  - Verbind de SG90 servo aan de cola dop.
+
+
 ## TODO: volledig documentatie maken.
  
 # Credits
