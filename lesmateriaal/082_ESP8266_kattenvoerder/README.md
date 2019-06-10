@@ -31,8 +31,8 @@ Uiteraard, voor je beginnen zorg ervoor dat je deze in huis heb.
 | Microcontroller | Raspberry Pi Zero W  |
 | <img src="https://projetsdiy.fr/wp-content/uploads/2018/06/wemos-d1-mini-activate-deep-sleep-mode-esp8266.jpg"  width="40%" height="40%"> | <img src="http://rcl.lt/files/f58c6a291a58a402fc48-128x128">  |
  | &nbsp; | &nbsp; |
- | &nbsp; | &nbsp; |
- | <img src="http://www.desiengineer.in/wp-content/uploads/2017/03/Desi1113_a.png"> |x |
+ | TowerPro SG90 servo | DietPi|
+ | <img src="http://www.desiengineer.in/wp-content/uploads/2017/03/Desi1113_a.png"> |<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfc4bvH0VSBAf1nGGiDSZn9Av08ry9x2ALradL8Lo_Rx2qeeZH"> |
 
 ## Software benodigd
  - Mosquitto MQQT server
