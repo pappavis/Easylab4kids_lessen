@@ -26,10 +26,13 @@ Uiteraard, voor je beginnen zorg ervoor dat je deze in huis heb.
  - 1x Lege colaflesje 500ml, of 1L €0,00.
  - 1x schaar €0,50.
 
-| Bnodigheden  | En meer |
+| Microcontroller  | Computertje |
 | ------------- | ------------- |
-|Wemos D1 Mini | Raspberry Pi Zero W  |
+| Microcontroller | Raspberry Pi Zero W  |
 | <img src="https://projetsdiy.fr/wp-content/uploads/2018/06/wemos-d1-mini-activate-deep-sleep-mode-esp8266.jpg"  width="40%" height="40%"> | <img src="http://rcl.lt/files/f58c6a291a58a402fc48-128x128">  |
+ | &nbsp; | &nbsp; |
+ | &nbsp; | &nbsp; |
+ | <img src="http://www.desiengineer.in/wp-content/uploads/2017/03/Desi1113_a.png"> |x |
 
 ## Software benodigd
  - Mosquitto MQQT server
