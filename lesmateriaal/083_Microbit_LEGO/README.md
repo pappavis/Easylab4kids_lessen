@@ -1,5 +1,5 @@
 ## 083 Microbit LEGO
-Bestuur jouw mivrobi zoals LEGO robot <br>
+Bestuur jouw Microbit zoals <a href="http://logo.cheerful.nl/nl/" target="_blank">LOGO</a> programmeertaal in die 1980's.<br>
 
 <img src="https://github.com/pappavis/Easylab4kids_lessen/blob/master/lesmateriaal/083_Microbit_LEGO/plaatjes/microbit_op1.jpg?raw=true" width="60%" height="60%">
 
