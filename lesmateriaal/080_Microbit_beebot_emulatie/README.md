@@ -27,12 +27,13 @@ Om hem bijvoorbeeld een klein vierkantje te laten lopen:<br>
 1. Zorg ervoor dat er batterijen in de robot is en een afstandsbediening, bijna ALLE afstandbedieningen zijn goed :).<br>
 2. Zet de robot in een ruime ruimte neer, of op een grote tafel!!<br>
 3. Open deze code in <a href="https://makecode.microbit.org/_Ja0W8o9c1RxC" target="_blank">makecode</a>. <br>
-4. Download de naar een Microbit.<br>
-5. Sluit de Microbit aan op de robot.<br>
-6. Ontkoppel de Microbit USB kabel van de computer.<br>
-7. Zet de robot aan.<br>
-8. 
-8. .. en rijden maar!<br>
+4. Bepaal welke codes op jouw afstandbediening vooruit,achteruit,links,recht,startp,stop, annuleren zijn. <br>
+ TIP --> zie <a href="https://www.youtube.com/watch?v=iLi8r-DT6r4" target="_blank">Microbit robot IR afstandsbediening #080 [Mei-2019]</a>
+5. Download de naar een Microbit.<br>
+6. Sluit de Microbit aan op de robot.<br>
+7. Ontkoppel de Microbit USB kabel van de computer.<br>
+8. Zet de robot aan.<br>
+9. .. en rijden maar!<br>
 <br>
 
 ## UITDAGINGEN
