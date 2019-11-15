@@ -1,0 +1,28 @@
+{
+    "MicroPython.executeButton": [
+        {
+            "text": "▶",
+            "tooltip": "Run",
+            "alignment": "left",
+            "command": "extension.executeFile",
+            "priority": 3.5
+        }
+    ],
+    "MicroPython.syncButton": [
+        {
+            "text": "$(sync)",
+            "tooltip": "sync",
+            "alignment": "left",
+            "command": "extension.execute",
+            "priority": 4
+        }
+    ],
+    "python.autoComplete.extraPaths": [
+        "c:\\Users\\pappa\\.vscode\\extensions\\ms-python.devicesimulatorexpress-2019.0.35146\\out",
+        "C:/Users/pappa/.vscode/extensions/rt-thread.rt-thread-micropython-1.0.3/microExamples/code-completion"
+    ],
+    "python.linting.pylintArgs": [
+        "--init-hook",
+        "import sys; sys.path.append('C:/Users/pappa/.vscode/extensions/rt-thread.rt-thread-micropython-1.0.3/microExamples/code-completion')"
+    ]
+}
