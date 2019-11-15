@@ -1,0 +1,65 @@
+input.onButtonPressed(Button.A, function () {
+    start1 = true
+    snelheid1 = 100
+})
+radio.onReceivedNumber(function (receivedNumber) {
+    snelheid1 = 0
+    start1 = false
+})
+let random1 = false
+let snelheid1 = 0
+let start1 = false
+music.playTone(262, music.beat(BeatFraction.Sixteenth))
+basic.showString("X")
+basic.pause(100)
+basic.clearScreen()
+for (let index = 0; index < 4; index++) {
+    basic.showArrow(ArrowNames.West)
+    basic.clearScreen()
+    basic.pause(100)
+}
+radio.setGroup(1)
+basic.forever(function () {
+    if (start1) {
+        if (maqueen.sensor(PingUnit.Centimeters) >= 0 && maqueen.sensor(PingUnit.Centimeters) < 10) {
+            music.playTone(131, music.beat(BeatFraction.Quarter))
+            basic.showIcon(IconNames.No)
+            maqueen.motorStopAll()
+            basic.showArrow(ArrowNames.South)
+            basic.pause(800)
+            maqueen.MotorRun(maqueen.aMotors.M1, maqueen.Dir.CCW, 120)
+            maqueen.MotorRun(maqueen.aMotors.M2, maqueen.Dir.CCW, 120)
+            basic.pause(800)
+            basic.clearScreen()
+        }
+        if (maqueen.sensor(PingUnit.Centimeters) > 10 && maqueen.sensor(PingUnit.Centimeters) < 35) {
+            random1 = Math.randomBoolean()
+            if (random1) {
+                maqueen.MotorRun(maqueen.aMotors.M1, maqueen.Dir.CW, 120)
+                maqueen.MotorRun(maqueen.aMotors.M2, maqueen.Dir.CW, 0)
+                basic.showArrow(ArrowNames.East)
+                music.playTone(220, music.beat(BeatFraction.Sixteenth))
+                maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOn)
+                basic.pause(800)
+                maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOff)
+                basic.clearScreen()
+            } else {
+                maqueen.MotorRun(maqueen.aMotors.M1, maqueen.Dir.CW, 0)
+                maqueen.MotorRun(maqueen.aMotors.M2, maqueen.Dir.CW, 120)
+                basic.showArrow(ArrowNames.West)
+                maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOn)
+                music.playTone(330, music.beat(BeatFraction.Sixteenth))
+                basic.pause(800)
+                maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOff)
+                basic.clearScreen()
+            }
+        } else {
+            maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOn)
+            maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOn)
+            basic.pause(50)
+            maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOff)
+            maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOff)
+            basic.pause(50)
+        }
+    }
+})
